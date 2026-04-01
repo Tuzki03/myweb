@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proreport</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/proreport.css">
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="professional.html">数据采集</a></li>
+                <li><a href="lab.html">实时监测</a></li>
+                <li><a href="datas.html">数据库</a></li>
+                <li><a href="proreport.html">专业分析报告</a></li>
+                <li><a href="table.html">自评量表</a></li>
+                <li><a href="explain.html">说明</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="container">
+        <div class="patient-info">
+            <div class="info-item">
+                <span class="info-label">患者姓名</span>
+                <span class="info-value">张某某</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">年龄</span>
+                <span class="info-value">28岁</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">测试ID</span>
+                <span class="info-value">xxxxxxxxxxx</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">测试日期</span>
+                <span class="info-value">2025年8月25日</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">抑郁风险指数</span>
+                <span class="info-value risk-low">5/27 (PHQ-9等效) - 轻度</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">置信度</span>
+                <span class="info-value">92%</span>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="card card-1">
+                <div class="card-header"><i>🧠</i>EEG频段功率分析</div>
+                <div id="eegChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>频段</th>
+                        <th>功率(μV²)</th>
+                        <th>占比</th>
+                        <th>临床意义</th>
+                    </tr>
+                    <tr>
+                        <td>δ波 (1-4Hz)</td>
+                        <td>42.3</td>
+                        <td>18.5%</td>
+                        <td>深度睡眠指标</td>
+                    </tr>
+                    <tr>
+                        <td>θ波 (4-8Hz)</td>
+                        <td>38.7</td>
+                        <td>22.1%</td>
+                        <td> drowsiness, 冥想状态</td>
+                    </tr>
+                    <tr>
+                        <td>α波 (8-13Hz)</td>
+                        <td>65.2</td>
+                        <td>35.6%</td>
+                        <td>放松警觉状态</td>
+                    </tr>
+                    <tr>
+                        <td>β波 (13-30Hz)</td>
+                        <td>25.8</td>
+                        <td>19.4%</td>
+                        <td> active thinking, 焦虑</td>
+                    </tr>
+                    <tr>
+                        <td>γ波 (30-45Hz)</td>
+                        <td>4.5</td>
+                        <td>4.4%</td>
+                        <td>认知处理</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-2">
+                <div class="card-header"><i>📈</i>睡眠结构分析</div>
+                <div id="sleepChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>睡眠阶段</th>
+                        <th>时间占比</th>
+                        <th>正常范围</th>
+                        <th>评估</th>
+                    </tr>
+                    <tr>
+                        <td>NREM I期</td>
+                        <td>8.2%</td>
+                        <td>5-10%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>NREM II期</td>
+                        <td>45.3%</td>
+                        <td>45-55%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>NREM III/IV期</td>
+                        <td>18.5%</td>
+                        <td>15-25%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>REM睡眠</td>
+                        <td>24.8%</td>
+                        <td>20-25%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>清醒时间</td>
+                        <td>3.2%</td>
+                        <td>5%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-3">
+                <div class="card-header"><i>🔍</i>情绪识别分析</div>
+                <div id="emotionChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>情绪类型</th>
+                        <th>占比</th>
+                        <th>强度</th>
+                    </tr>
+                    <tr>
+                        <td>高兴</td>
+                        <td>35%</td>
+                        <td class="risk-low">高</td>
+                    </tr>
+                    <tr>
+                        <td>平静</td>
+                        <td>40%</td>
+                        <td class="risk-low">高</td>
+                    </tr>
+                    <tr>
+                        <td>低落</td>
+                        <td>15%</td>
+                        <td class="risk-medium">中</td>
+                    </tr>
+                    <tr>
+                        <td>焦虑</td>
+                        <td>10%</td>
+                        <td class="risk-medium">中</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-4">
+                <div class="card-header"><i>🎯</i>注意力水平评估</div>
+                <div id="attentionChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>指标</th>
+                        <th>得分</th>
+                        <th>评估</th>
+                    </tr>
+                    <tr>
+                        <td>持续专注</td>
+                        <td>65%</td>
+                        <td class="risk-medium">需改善</td>
+                    </tr>
+                    <tr>
+                        <td>任务正确率</td>
+                        <td>88%</td>
+                        <td class="risk-low">良好</td>
+                    </tr>
+                    <tr>
+                        <td>抗干扰能力</td>
+                        <td>60%</td>
+                        <td class="risk-medium">需改善</td>
+                    </tr>
+                    <tr>
+                        <td>认知灵活性</td>
+                        <td>75%</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-5">
+                <div class="card-header"><i>🧩</i>脑网络连接分析</div>
+                <div id="networkChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>网络</th>
+                        <th>连接强度</th>
+                        <th>状态</th>
+                    </tr>
+                    <tr>
+                        <td>默认模式网络</td>
+                        <td>0.68</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>突显网络</td>
+                        <td>0.72</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>中央执行网络</td>
+                        <td>0.61</td>
+                        <td class="risk-medium">略低</td>
+                    </tr>
+                    <tr>
+                        <td>背侧注意网络</td>
+                        <td>0.65</td>
+                        <td class="risk-medium">略低</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-6">
+                <div class="card-header"><i>📊</i>心理健康趋势分析</div>
+                <div id="trendChart" class="chart-container large-chart"></div>
+            </div>
+
+            <div class="card card-7">
+                <div class="card-header"><i>⏱️</i>反应时间分析</div>
+                <div id="reactionChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>任务类型</th>
+                        <th>平均反应时间</th>
+                        <th>变化</th>
+                    </tr>
+                    <tr>
+                        <td>情绪识别</td>
+                        <td>720ms</td>
+                        <td class="risk-low">-5%</td>
+                    </tr>
+                    <tr>
+                        <td>注意力任务</td>
+                        <td>850ms</td>
+                        <td class="risk-medium">+3%</td>
+                    </tr>
+                    <tr>
+                        <td>认知任务</td>
+                        <td>920ms</td>
+                        <td class="risk-low">-2%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card card-8">
+                <div class="card-header"><i>🌙</i>睡眠质量指标</div>
+                <div id="sleepQualityChart" class="chart-container"></div>
+            </div>
+
+            <div class="card card-9">
+                <div class="card-header"><i>🧘</i>生理指标监测</div>
+                <div id="physicalChart" class="chart-container"></div>
+                <table class="data-table">
+                    <tr>
+                        <th>指标</th>
+                        <th>数值</th>
+                        <th>状态</th>
+                    </tr>
+                    <tr>
+                        <td>心率变异性</td>
+                        <td>68ms</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>呼吸频率</td>
+                        <td>14次/分钟</td>
+                        <td class="risk-low">正常</td>
+                    </tr>
+                    <tr>
+                        <td>皮电反应</td>
+                        <td>4.2μS</td>
+                        <td class="risk-medium">略高</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="depression-assessment">
+            <h2>抑郁症多任务评估结果</h2>
+            <div class="depression-grid">
+                <div class="depression-card">
+                    <h3>睡眠维度评估</h3>
+                    <p>REM睡眠潜伏期缩短，δ波功率降低，符合轻度抑郁特征。</p>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 65%; background-color: #f39c12;"></div>
+                    </div>
+                    <span>风险指数: 65/100 (中度关注)</span>
+                </div>
+                <div class="depression-card">
+                    <h3>情绪维度评估</h3>
+                    <p>正价情绪出现频率下降，微表情识别显示情绪表达抑制。</p>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 55%; background-color: #f39c12;"></div>
+                    </div>
+                    <span>风险指数: 55/100 (轻度关注)</span>
+                </div>
+                <div class="depression-card">
+                    <h3>注意力维度评估</h3>
+                    <p>持续注意力任务中β波功率异常升高，错误率+28%。</p>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: 70%; background-color: #e74c3c;"></div>
+                    </div>
+                    <span>风险指数: 70/100 (较高风险)</span>
+                </div>
+            </div>
+            <div class="depression-summary">
+                <h3>总体抑郁风险评级：轻度抑郁倾向</h3>
+                <p>建议结合PHQ-9量表与临床访谈进一步确认，并启动个性化调控方案。</p>
+            </div>
+        </div>
+        <div class="clinical-summary">
+            <h2>临床分析与建议</h2>
+            <p>患者多模态脑电与行为数据分析显示存在轻度抑郁倾向。REM睡眠潜伏期缩短(
+                小于70分钟),δ波功率显著降低（较健康基线下降约22%），与非快速眼动（NREM）睡眠的第三、四期占比（18.5%）减少有关，这可能影响情绪调节功能和神经可塑性。 </p>
+            <p>情绪维度分析显示正价情绪出现频率下降15%，微表情识别中嘴角上扬动作减少，声纹分析显示语音活力下降。注意力评估中发现持续注意力任务中β波功率异常升高（+28%），错误率增加，抗干扰能力仅为60%，反映执行控制网络功能轻微受损。默认模式网络与背侧注意网络连接强度略低（0.65），与前额叶-边缘系统调节功能减弱一致。
+            </p>
+            <p><strong>治疗建议：</strong>
+                1）启动睡眠调控方案，采用δ波诱导音乐与低频光疗，增强深度睡眠；2）进行认知行为训练（CBT）结合神经反馈，提升注意力控制与情绪调节能力；3）推荐每日20分钟正念冥想，强化α波活动，改善情绪状态；4）建议2周后复测，动态评估调控效果，必要时结合临床访谈进一步确认。
+            </p>
+        </div>
+        <script src="js/proreport.js"></script>
+</body>
+
+</html>

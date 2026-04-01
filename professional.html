@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional</title>
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/professional.css">
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="professional.html">数据采集</a></li>
+                <li><a href="lab.html">实时监测</a></li>
+                <li><a href="datas.html">数据库</a></li>
+                <li><a href="proreport.html">专业分析报告</a></li>
+                <li><a href="table.html">自评量表</a></li>
+                <li><a href="explain.html">说明</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="main-container">
+        <div class="container-grid">
+            <!-- 患者基本信息 -->
+            <div class="card">
+                <h2>患者基本信息</h2>
+                <div class="form-group">
+                    <label for="patient-name">姓名</label>
+                    <div class="input-container">
+                        <input type="text" id="patient-name" placeholder="请输入患者姓名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patient-age">年龄</label>
+                    <div class="input-container">
+                        <input type="number" id="patient-age" placeholder="请输入患者年龄">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patient-gender">性别</label>
+                    <div class="input-container">
+                        <select id="patient-gender">
+                            <option value="">请选择</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patient-height">身高(cm)</label>
+                    <div class="input-container">
+                        <input type="number" id="patient-height" placeholder="请输入患者身高">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patient-weight">体重(kg)</label>
+                    <div class="input-container">
+                        <input type="number" id="patient-weight" placeholder="请输入患者体重">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 实验环境参数 -->
+            <div class="card">
+                <h2>实验环境参数</h2>
+                <div class="form-group">
+                    <label for="temperature">环境温度(℃)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="temperature" placeholder="请输入温度">
+                        <button id="autoTempButton">自动获取</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="humidity">环境湿度(%)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="humidity" placeholder="请输入湿度">
+                        <button id="autoHumidityButton">自动获取</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="noise-level">背景噪音水平(dB)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="noise-level" placeholder="请输入噪音水平">
+                        <button id="autoNoiseButton">自动获取</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="light-intensity">屏幕亮度(lx)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="light-intensity" placeholder="请输入屏幕亮度">
+                        <button id="autoLightButton">自动获取</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experiment-type">实验类型标记</label>
+                    <div class="input-container">
+                        <select id="experiment-type">
+                            <option value="rest-open">静息态睁眼</option>
+                            <option value="rest-close">静息态闭眼</option>
+                            <option value="attention">注意态</option>
+                            <option value="emotion-video">情绪视频</option>
+                            <option value="emotion-imagine">情绪想象</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 传感器与设备校准 -->
+            <div class="card">
+                <h2>传感器与设备校准</h2>
+                <div class="form-group">
+                    <label for="eeg-calibration">EEG放大器校准 (Neuroscan)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="eeg-calibration" placeholder="EEG校准状态">
+                        <button id="eeg-calibrate-btn">校准</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="eog-calibration">眼动仪校准 (EOG)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="eog-calibration" placeholder="EOG校准状态">
+                        <button id="eog-calibrate-btn">校准</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="camera-calibration">摄像头校准 (表情识别)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="camera-calibration" placeholder="摄像头校准状态">
+                        <button id="camera-calibrate-btn">校准</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mic-calibration">麦克风校准 (声纹分析)</label>
+                    <div class="input-button-container">
+                        <input type="text" id="mic-calibration" placeholder="麦克风校准状态">
+                        <button id="mic-calibrate-btn">校准</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-calibration">反馈设备校准</label>
+                    <div class="input-button-container">
+                        <input type="text" id="feedback-calibration" placeholder="反馈设备校准状态">
+                        <button id="feedback-calibrate-btn">校准</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 多维度筛查参数设置 -->
+        <div class="card">
+            <div class="header">
+                <h1>多维度筛查参数设置</h1>
+                <p>配置抑郁症筛查与干预系统的各项参数，确保数据采集和分析的准确性</p>
+            </div>
+
+            <div class="container">
+                <!-- 静息态参数 -->
+                <div class="parameter-card">
+                    <div class="card-header">
+                        <h2>静息态参数</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="rest-open-duration">睁眼时长(分钟)</label>
+                        <input type="number" id="rest-open-duration" value="2" min="1" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="rest-close-duration">闭眼时长(分钟)</label>
+                        <input type="number" id="rest-close-duration" value="2" min="1" max="10">
+                    </div>
+                </div>
+
+                <!-- 注意态参数 -->
+                <div class="parameter-card">
+                    <div class="card-header">
+                        <h2>注意态参数</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="attention-duration">任务时长(分钟)</label>
+                        <input type="number" id="attention-duration" value="1" min="1" max="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="attention-step">数字递减步长</label>
+                        <input type="number" id="attention-step" value="3" min="1" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="attention-repeat">重复次数</label>
+                        <input type="number" id="attention-repeat" value="3" min="1" max="10">
+                    </div>
+                </div>
+
+                <!-- 情绪任务参数 -->
+                <div class="parameter-card">
+                    <div class="card-header">
+                        <h2>情绪任务参数</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-video-type">视频类型</label>
+                        <select id="emotion-video-type">
+                            <option value="happy">高兴</option>
+                            <option value="calm">平静</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-video-duration">任务时长(分钟)</label>
+                        <input type="number" id="emotion-video-duration" value="1" min="1" max="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-video-repeat">重复次数</label>
+                        <input type="number" id="emotion-video-repeat" value="4" min="1" max="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-video-feedback">反馈模式</label>
+                        <select id="emotion-video-feedback">
+                            <option value="with-feedback">有反馈</option>
+                            <option value="without-feedback">无反馈</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 情绪想象参数 -->
+                <div class="parameter-card">
+                    <div class="card-header">
+                        <h2>情绪想象参数</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-imagine-type">情绪类型</label>
+                        <select id="emotion-imagine-type">
+                            <option value="happy">高兴</option>
+                            <option value="calm">平静</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-imagine-duration">任务时长(分钟)</label>
+                        <input type="number" id="emotion-imagine-duration" value="1" min="1" max="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion-imagine-repeat">重复次数</label>
+                        <input type="number" id="emotion-imagine-repeat" value="2" min="1" max="10">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-grid" style="margin-top: 20px;">
+                <!-- 信号处理参数 -->
+                <div class="card">
+                    <h3>信号处理参数</h3>
+                    <div class="form-group">
+                        <label for="sampling-frequency">采样频率</label>
+                        <div class="input-container">
+                            <select id="sampling-frequency">
+                                <option value="250">250Hz</option>
+                                <option value="500">500Hz</option>
+                                <option value="1000" selected>1000Hz</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="filter-range">滤波范围</label>
+                        <div class="input-container">
+                            <input type="text" id="filter-range" value="0.5-45Hz">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="electrode-impedance">电极阻抗阈值</label>
+                        <div class="input-container">
+                            <input type="text" id="electrode-impedance" value="<10kΩ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-markers">事件标记类型</label>
+                        <div class="input-container">
+                            <input type="text" id="event-markers" value="56-63, 8为任务结束">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 模型参数 -->
+                <div class="card">
+                    <h3>模型参数</h3>
+                    <div class="form-group">
+                        <label for="model-type">脑电大模型类型</label>
+                        <div class="input-container">
+                            <select id="model-type">
+                                <option value="labram">LaBraM</option>
+                                <option value="eegpt">EEGPT</option>
+                                <option value="brainwave">BrainWave</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feature-extraction">特征提取方法</label>
+                        <div class="input-container">
+                            <select id="feature-extraction">
+                                <option value="vq-nsp">VQ-NSP</option>
+                                <option value="stft">STFT</option>
+                                <option value="wavelet">小波变换</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="classifier-type">分类器类型</label>
+                        <div class="input-container">
+                            <select id="classifier-type">
+                                <option value="svm">SVM</option>
+                                <option value="xgboost">XGBoost</option>
+                                <option value="randomforest">随机森林</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fusion-weights">融合权重</label>
+                        <div class="input-container">
+                            <input type="text" id="fusion-weights" placeholder="情绪/注意力/睡眠维度权重">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="save-screening-params">保存设置</button>
+                <button id="reset-screening-params">重置</button>
+            </div>
+        </div>
+
+        <!-- 安装配置 -->
+        <div class="card">
+            <h2>安装配置</h2>
+            <div class="form-group">
+                <label for="amplifier">电极放大器选择</label>
+                <div class="input-container">
+                    <select id="amplifier">
+                        <option value="neuroscan">Neuroscan</option>
+                        <option value="biosemi">BioSemi</option>
+                        <option value="brainproducts">Brain Products</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="save-location">文件自动保存位置</label>
+                <div class="input-button-container">
+                    <input type="text" id="save-location" value="我的网盘/脑电数据">
+                    <button id="browse-btn">浏览</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bci-feedback">实时反馈开关 (BCI反馈)</label>
+                <div class="input-container">
+                    <select id="bci-feedback">
+                        <option value="on">开启</option>
+                        <option value="off">关闭</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="model-path">模型加载路径</label>
+                <div class="input-button-container">
+                    <input type="text" id="model-path" placeholder="预训练模型路径">
+                    <button id="model-browse-btn">浏览</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 设备信息与电极校准 -->
+        <div class="info-calibration-container">
+            <div class="card">
+                <h2>设备信息</h2>
+                <div class="form-group">
+                    <label for="device-model">设备型号</label>
+                    <div class="input-container">
+                        <input type="text" id="device-model" value="Neuroscan SynAmps2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="serial-number">序列号</label>
+                    <div class="input-container">
+                        <input type="text" id="serial-number" value="SN202405001">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firmware-version">固件版本</label>
+                    <div class="input-container">
+                        <input type="text" id="firmware-version" value="v2.3.5">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="manufacturer">生产厂家</label>
+                    <div class="input-container">
+                        <input type="text" id="manufacturer" value="Compumedics Neuroscan">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="production-date">生产日期</label>
+                    <div class="input-container">
+                        <input type="date" id="production-date" value="2023-06-01">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>电极校准</h2>
+                <p class="calibration-instruction">电极校准是确保设备准确采集脑电信号的重要步骤，请按照以下步骤操作：</p>
+                <ol class="calibration-steps">
+                    <li>将电极正确放置在指定的头皮位置</li>
+                    <li>确保所有电极阻抗低于设定阈值</li>
+                    <li>点击"开始校准"按钮</li>
+                    <li>等待校准过程完成，期间请保持静止</li>
+                </ol>
+                <div class="form-group">
+                    <label>校准状态: <span id="calibration-status">未开始</span></label>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" id="calibration-progress"></div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="calibration-button">开始校准</button>
+                    <button id="check-impedance">检查阻抗</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group" style="margin-top: 30px;">
+            <button id="submit-all-button" style="padding: 12px 25px;">提交所有设置</button>
+            <button id="cancel-all-button" style="background-color: #ed7171;">取消</button>
+        </div>
+    </div>
+
+    <script src="js/professional.js"></script>
+
+</body>
+
+</html>

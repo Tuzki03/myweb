@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全页面灯光控制系统</title>
+    <link rel="stylesheet" href="style/light.css">
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="personal.html">回到个性化调控</a></li>
+                <li><a href="game.html">注意力游戏</a></li>
+                <li><a href="music.html">音乐愈疗</a></li>
+                <li><a href="aiagent.html">AI调控师</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <header>
+            <h1>全页面灯光控制</h1>
+            <p class="subtitle">调节亮度和色温，改变页面氛围</p>
+        </header>
+
+        <div class="control-group">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span><i class="fas fa-sun icon brightness-icon"></i> 亮度</span>
+                    <span class="slider-value" id="brightness-value">80%</span>
+                </div>
+                <input type="range" min="0" max="100" value="80" class="slider" id="brightness-slider">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span><i class="fas fa-temperature-high icon temperature-icon"></i> 色温</span>
+                    <span class="slider-value" id="temperature-value">4500K</span>
+                </div>
+                <input type="range" min="2000" max="6500" value="4500" class="slider" id="temperature-slider">
+            </div>
+        </div>
+
+        <div class="power-control">
+            <button class="power-btn" id="power-btn">关闭灯光</button>
+        </div>
+    </div>
+</body>
+<script src="js/light.js"></script>
+
+</html>

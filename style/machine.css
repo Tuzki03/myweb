@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border - box;
+}
+
+body {
+    font-family: Arial, sans - serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #b1ece3;
+    min-height: 100vh;
+    /* 改为min - height */
+    min-width: 100vw;
+    /* 改为min - width */
+}
+
+.bigbox {
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid black; */
+}
+
+.container {
+    width: 100%;
+    height: 550px;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #edffe1;
+}
+
+/* 左侧停靠的容器 */
+.left-panel {
+    width: 20%;
+    height: auto;
+    float: left;
+    /* border: 1px solid #a16868; */
+    margin-top: 180px;
+    margin-left: 18%;
+    z-index: 999;
+}
+
+.right-panel {
+    width: 40%;
+    height: 600px;
+    /* border: 1px solid #d27474; */
+    float: right;
+    margin-right: 20%;
+    margin-top: 50px;
+
+}
+
+.button-group {
+    display: flex;
+    padding-left: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 30px;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.button-group button {
+    width: 150px;
+    cursor: pointer;
+    background-color: #67dab0;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #3db684;
+}
+
+.ip-display {
+    margin-bottom: 15px;
+    text-align: center;
+    /* 添加这一行 */
+}
+
+#impedanceCanvas {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.tiaozhuan {
+    color: rgb(13, 118, 85);
+    margin-left: 70%;
+    font-size: 30px;
+    font-family: fantasy;
+    font-weight: 700;
+}
+
+.gotolab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    margin-left: 71%;
+    border: 2px solid #53d39e;
+    background-color: #53d39e;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.gotolab a:hover {
+    color: rgb(13, 118, 85);
+}
+
+.gotolab a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#impedanceCanvas {
+    display: none;
+    /* 初始时隐藏canvas */
+}

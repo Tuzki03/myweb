@@ -1,0 +1,105 @@
+body {
+    background: linear-gradient(#7ae1b8, #b5f0e8);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    float: right;
+    width: 35%;
+    height: 800px;
+    font-size: 25px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 10%;
+    margin-right: 20px;
+}
+
+#contactbox {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: #1eb361;
+}
+
+.table div {
+    padding: 5px 0;
+}
+
+.table span {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    padding-bottom: 5px;
+    color: #1eb361;
+    text-transform: uppercase;
+}
+
+.table input[type="text"],
+.table textarea {
+    padding: 8px;
+    display: block;
+    width: 98%;
+    border: none;
+    outline: none;
+    color: #464646;
+    font-size: 0.8125em;
+    font-family: Arial;
+    border: 1px solid rgba(85, 85, 85, 0.19);
+    -webkit-appearance: none;
+    background: whitesmoke;
+}
+
+.table textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit {
+    width: 130px;
+    height: 55px;
+    font-size: 20px;
+    margin-left: 40%;
+    border: 2px solid #999;
+    border-radius: 30px;
+}
+
+.polscience {
+    width: 60%;
+    height: 1000px;
+    float: left;
+    margin-top: 30px;
+    /* border: 1px solid green; */
+}
+
+.smallbox {
+    width: 95%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.smallbox img {
+    width: 35%;
+    margin-top: 50px;
+    float: left;
+}
+
+.textcontent {
+    width: 60%;
+    float: right;
+    margin-top: 23px;
+}
+
+.textcontent h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #22855d;
+}
+
+/* 添加的代码 - 清除浮动 */
+.smallbox:nth-child(2)::after {
+    content: "";
+    display: table;
+    clear: both;
+}

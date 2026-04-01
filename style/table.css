@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(#b5f0e2, #f0feff);
+    min-height: 100vh;
+    min-width: 100vw;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 报告容器 */
+.report-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    margin: 30px auto;
+    position: relative;
+}
+
+/* 报告标题区域 */
+.report-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+}
+
+.report-header h1 {
+    color: #1a8e71;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.report-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #1a8e71, #3ad58d);
+    border-radius: 3px;
+}
+
+/* 章节样式 */
+.section {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.section h2 {
+    color: #1a8e71;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, #1a8e71, #3ad58a);
+}
+
+.section h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+/* 信息组样式 */
+.info-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.info-group p {
+    margin: 0;
+    flex: 1 0 calc(33.333% - 40px);
+    min-width: 200px;
+}
+
+.info-group strong {
+    color: #1a8e71;
+    font-weight: 600;
+}
+
+/* 列表样式 */
+.report-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.report-container ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.report-container ul li::before {
+    content: '•';
+    color: #1a8e71;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+}
+
+.report-container ul li strong {
+    color: #1a8e71;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+th {
+    background-color: #f8fafd;
+    color: #1a8e71;
+    font-weight: 600;
+    border-top: 1px solid #eaeaea;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+tr:last-child {
+    background-color: #f0f7ff;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* 结论部分 */
+.conclusion {
+    background-color: #f8fafd;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #1a8e71;
+    margin: 30px 0;
+}
+
+.signatures {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.signature-item {
+    text-align: center;
+}
+
+.signature-item .name {
+    font-family: cursive;
+}
+
+
+
+/* 页脚 */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+    font-size: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .report-container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .info-group p {
+        flex: 1 0 100%;
+    }
+
+    .signatures {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

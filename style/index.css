@@ -1,0 +1,73 @@
+body {
+    background: linear-gradient(#7ae1b8, #b5f0e8);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    height: 500px;
+    margin: 200px;
+    background-color: white;
+}
+
+.indexleft {
+    width: 38%;
+    height: 100%;
+    float: left;
+    border-right: 2px solid gold;
+}
+
+.indexright {
+    width: 60%;
+    height: 100%;
+    float: right;
+    padding-right: 6px;
+}
+
+.rtop {
+    width: 100%;
+    height: 70%;
+    margin-top: 50px;
+}
+
+.rtop h2 {
+    text-align: center;
+    color: rgb(18, 136, 99);
+}
+
+.rtop p {
+    font-size: 20px;
+    text-indent: 2em;
+    margin: 20px 30px;
+    color: #202f39;
+    /* color: #666; */
+    line-height: 2;
+    letter-spacing: 0.5px;
+    /* 增加字符间距 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* 添加文字阴影 */
+}
+
+.rbottom {
+    width: 100%;
+    height: 25%;
+    /* border-top: 1px solid gold; */
+}
+
+.indexright .rbottom a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin-top: 5px;
+    margin-left: 325px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background-color: #7ae188;
+    overflow: hidden;
+}

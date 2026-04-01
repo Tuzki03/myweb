@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#cdffeb, #6affcd);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #2c6e3c 0%, #4a9560 100%);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.patient-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background: #f0f8f0;
+    border-bottom: 1px solid #d0e8d0;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #5c7c6c;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    border-top: 4px solid #3aac5a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e3c;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8f5e8;
+}
+
+.card-header i {
+    margin-right: 10px;
+    color: #3aac5a;
+}
+
+.chart-container {
+    height: 250px;
+    width: 100%;
+}
+
+.large-chart {
+    height: 320px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background-color: #f0f8f0;
+    font-weight: 600;
+    color: #3a6c4a;
+}
+
+.data-table tr:hover {
+    background-color: #f8fcf8;
+}
+
+.clinical-summary {
+    background: linear-gradient(120deg, #e8f5e8, #d0ecd0);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 0 30px 30px;
+    border-left: 5px solid #3aac5a;
+}
+
+.clinical-summary h2 {
+    margin-bottom: 15px;
+    color: #2c6e3c;
+}
+
+.clinical-summary p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.risk-low {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.risk-medium {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.risk-high {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.card-1 {
+    grid-column: span 6;
+}
+
+.card-2 {
+    grid-column: span 6;
+}
+
+.card-3 {
+    grid-column: span 4;
+}
+
+.card-4 {
+    grid-column: span 4;
+}
+
+.card-5 {
+    grid-column: span 4;
+}
+
+.card-6 {
+    grid-column: span 8;
+}
+
+.card-7 {
+    grid-column: span 4;
+}
+
+.card-8 {
+    grid-column: span 6;
+}
+
+.card-9 {
+    grid-column: span 6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 0 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2c6e3c 0%, #4a9560 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: #e0e8e0;
+    color: #2c3e3c;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #5c7c6c;
+    font-size: 14px;
+    border-top: 1px solid #e8f5e8;
+}
+
+@media (max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5,
+    .card-6,
+    .card-7,
+    .card-8,
+    .card-9 {
+        grid-column: span 12;
+    }
+}
+
+.depression-assessment {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 0 30px 30px;
+    border-left: 5px solid #6acc99;
+}
+
+.depression-assessment h2 {
+    color: #2c5031;
+    margin-bottom: 20px;
+}
+
+.depression-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.depression-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.depression-card h3 {
+    color: #73c18c;
+    margin-bottom: 10px;
+}
+
+.score-bar {
+    width: 100%;
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.score-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.depression-summary {
+    background: #e8f8ee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.depression-summary h3 {
+    color: #29b976;
+    margin-bottom: 10px;
+}

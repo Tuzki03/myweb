@@ -1,0 +1,320 @@
+.music-category {
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: linear-gradient(#7ae1b8, #b5f0e8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.Container1 {
+    display: inline-flex;
+    /* background-color: #ffbdc9; */
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+nav {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+    padding: 0;
+    /* background: #fff; */
+    background-color: rgb(83, 208, 154);
+    border-radius: 50px;
+    /* padding: 2px; */
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f9f7f7;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: '';
+    background: rgb(28, 176, 112);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transform: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: #fff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+nav ul li a {
+    color: inherit;
+    /* 继承父元素的颜色，可根据实际需求换成具体颜色值，如 #333 */
+    text-decoration: none;
+    /* 去掉下划线 */
+}
+
+.music-list {
+    list-style: none;
+    padding: 0;
+
+}
+
+.music-list li {
+    float: inline-start;
+    width: 175px;
+    height: 180px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin-left: 150px;
+    margin-bottom: 40px;
+
+    border-radius: 20px;
+    /* background: rgba(31, 211, 231, 0.866); */
+    box-shadow: 20px 20px 60px rgba(31, 211, 231, 0.866),
+        -10px -10px 50px #ffffff;
+    background-color: #fff;
+
+    font-size: 18px;
+    font-weight: 700;
+    font-family: '思源黑体 CN';
+
+}
+
+.music-list li:hover {
+    background-color: #efefef;
+}
+
+.music-list img {
+    width: 140px;
+    /* 设置图片宽度 */
+    height: 120px;
+    /* 设置图片高度 */
+    margin-right: 120px;
+    /* 图片与文字之间的间距 */
+}
+
+#audioPlayer {
+    margin-top: 20px;
+    width: 800px;
+    margin-left: 300px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 600px;
+    margin-bottom: 30px;
+    font-size: 60px;
+
+    /* padding-left: 90px; */
+    background-image:
+        linear-gradient(90feg,
+            #673ab7,
+            #e91e63);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-image: linear-gradient(rgb(255, 167, 69),
+            rgb(254, 134, 159),
+            rgb(239, 122, 200),
+            rgb(160, 131, 237),
+            rgb(67, 174, 255));
+}
+
+.first {
+    margin-left: 630px;
+}
+
+.vide1,
+.vide2,
+.vide6,
+.vide7 {
+    margin-right: 115px;
+}
+
+
+
+.playlist-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #3db46b;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:nth-child(2) {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    gap: 15px;
+    /* 图片和文字之间的间距 */
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
+    /* 防止图片被压缩 */
+}
+
+thead tr th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+img {
+    max-width: 50px;
+    /* 限制封面图片宽度 */
+    border-radius: 5px;
+    /* 圆角 */
+    margin-right: 10px;
+    /* 添加右边距 */
+}
+
+audio {
+    width: 100%;
+    /* 确保播放器宽度与单元格一致 */
+    display: none;
+    /* 默认隐藏播放器 */
+}
+
+.play-button {
+    display: none;
+    /* 默认隐藏播放按钮 */
+    cursor: pointer;
+    color: #04cd97;
+}
+
+
+
+tr:hover audio {
+    display: block;
+    /* 鼠标悬停时显示播放器 */
+}
+
+.fanye-container {
+    margin-left: 20%;
+}
+
+.fanye-container button {
+    display: left;
+    background-color: #3a886a;
+    color: white;
+    box-shadow: none;
+    /* 去掉阴影 */
+    border: none;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.fanye-container span {
+    color: white;
+    font-size: 20px;
+}
+
+.fanye-container .fanye {
+    width: 80px;
+    height: 35px;
+}
+
+.fanye-container .first {
+    margin-left: 515px;
+    margin-bottom: 50px;
+}
+
+.fanye-container .naodian {
+    width: 180px;
+    margin-left: 25px;
+}
+
+.fanye-container .naodian a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        padding-left: 5px;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+        display: none;
+    }
+
+    td:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    td img {
+        width: 40px;
+        height: 40px;
+    }
+}

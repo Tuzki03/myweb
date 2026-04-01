@@ -1,0 +1,212 @@
+body {
+    background-image: linear-gradient(#7ae1b8, #b5f0e8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.Container1 {
+    display: inline-flex;
+    /* background-color: #ffbdc9; */
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+nav {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    padding: 0;
+    /* background: #fff; */
+    background-color: rgb(83, 208, 154);
+    border-radius: 50px;
+    /* padding: 2px; */
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f9f7f7;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: '';
+    background: rgb(28, 176, 112);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transform: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: #fff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+nav ul li a {
+    color: inherit;
+    /* 继承父元素的颜色，可根据实际需求换成具体颜色值，如 #333 */
+    text-decoration: none;
+    /* 去掉下划线 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.grid-item {
+    background: linear-gradient(145deg, #ffffff, #f1f8e9);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.15);
+    transition: all 0.3s ease;
+    border: 3px solid #E8F5E9;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(76, 175, 80, 0.25);
+    border-color: #4CAF50;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .grid-image {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 25px;
+    text-align: center;
+}
+
+.content h3 {
+    color: #2E7D32;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-container {
+        height: 180px;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+    }
+}

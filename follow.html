@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMood - 医疗档案管理系统</title>
+    <link rel="stylesheet" href="style/follow.css">
+
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="community.html">设备链接检测</a></li>
+                <li><a href="clab.html">实时监测</a></li>
+                <li><a href="comreport.html">报告</a></li>
+                <li><a href="personal.html">个性化调控</a></li>
+                <li><a href="follow.html">用药记录跟踪</a></li>
+                <li><a href="science.html">科普说明</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="container">
+        <!-- 左侧信息栏 -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>张明 - 医疗档案</h2>
+                <div class="patient-id">病历号: xxxxxxxx</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-user"></i> 基本信息</h3>
+                <div class="info-item">
+                    <label>姓名</label>
+                    <span>张明</span>
+                </div>
+                <div class="info-item">
+                    <label>年龄</label>
+                    <span>32岁</span>
+                </div>
+                <div class="info-item">
+                    <label>性别</label>
+                    <span>男</span>
+                </div>
+                <div class="info-item">
+                    <label>出生日期</label>
+                    <span>xxxx年xx月xx日</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-stethoscope"></i> 医疗信息</h3>
+                <div class="info-item">
+                    <label>主治医生</label>
+                    <span>李医生</span>
+                </div>
+                <div class="info-item">
+                    <label>最近就诊</label>
+                    <span>xxxx年xx月xx日</span>
+                </div>
+                <div class="info-item">
+                    <label>医保类型</label>
+                    <span>城乡居民基本医疗保险</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-heartbeat"></i> 健康指标</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>身高</label>
+                        <span>175 cm</span>
+                    </div>
+                    <div class="info-item">
+                        <label>体重</label>
+                        <span>70 kg</span>
+                    </div>
+                    <div class="info-item">
+                        <label>BMI</label>
+                        <span>22.9</span>
+                    </div>
+                    <div class="info-item">
+                        <label>血压</label>
+                        <span>120/80 mmHg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-notes-medical"></i> 最近体检</h3>
+                <div class="info-item">
+                    <label>最近体检日期</label>
+                    <span>xxxx年xx月xx日</span>
+                </div>
+                <div class="info-item">
+                    <label>体检结果</label>
+                    <span>总体健康</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="main-content">
+            <!-- 第一行 -->
+            <div class="content-row">
+                <div class="content-col">
+                    <div class="card">
+                        <h2>
+                            <span><i class="fas fa-pills"></i> 当前用药</span>
+                            <button class="add-btn"><i class="fas fa-plus"></i> 添加</button>
+                        </h2>
+                        <table class="medication-table">
+                            <thead>
+                                <tr>
+                                    <th>药品名称</th>
+                                    <th>剂量</th>
+                                    <th>频率</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>舍曲林</td>
+                                    <td>50mg</td>
+                                    <td>每日一次</td>
+                                    <td><span class="status completed">进行中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>阿普唑仑</td>
+                                    <td>0.5mg</td>
+                                    <td>睡前服用</td>
+                                    <td><span class="status completed">进行中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>米氮平</td>
+                                    <td>15mg</td>
+                                    <td>每日一次</td>
+                                    <td><span class="status pending">即将开始</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card">
+                        <h2><i class="fas fa-history"></i> 历史用药记录</h2>
+                        <table class="medication-table">
+                            <thead>
+                                <tr>
+                                    <th>药品名称</th>
+                                    <th>剂量</th>
+                                    <th>用药期间</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>氟西汀</td>
+                                    <td>20mg</td>
+                                    <td>xxxx年x月-xx月</td>
+                                    <td><span class="status completed">已完成</span></td>
+                                </tr>
+                                <tr>
+                                    <td>文拉法辛</td>
+                                    <td>75mg</td>
+                                    <td>xxxx年x月-xx月</td>
+                                    <td><span class="status completed">已完成</span></td>
+                                </tr>
+                                <tr>
+                                    <td>帕罗西汀</td>
+                                    <td>25mg</td>
+                                    <td>xxxx年x月-xx月</td>
+                                    <td><span class="status missed">提前终止</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content-col">
+                    <div class="card">
+                        <h2>
+                            <span><i class="fas fa-file-medical"></i> 副作用跟踪</span>
+                            <button class="add-btn"><i class="fas fa-plus"></i> 添加</button>
+                        </h2>
+                        <div class="side-effects">
+                            <div class="effect-item">
+                                <div class="effect-info">
+                                    <span class="effect-name">头痛</span>
+                                    <span class="effect-date">开始于: xxxx年xx月xx日</span>
+                                </div>
+                                <span class="effect-severity severity-mild">轻度</span>
+                            </div>
+                            <div class="effect-item">
+                                <div class="effect-info">
+                                    <span class="effect-name">恶心</span>
+                                    <span class="effect-date">开始于: xxxx年xx月xx日</span>
+                                </div>
+                                <span class="effect-severity severity-moderate">中度</span>
+                            </div>
+                            <div class="effect-item">
+                                <div class="effect-info">
+                                    <span class="effect-name">失眠</span>
+                                    <span class="effect-date">开始于: xxxx年xx月xx日</span>
+                                </div>
+                                <span class="effect-severity severity-severe">严重</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h3><i class="fas fa-chart-line"></i> 用药依从性分析</h3>
+                        <div class="chart-placeholder">
+                            用药依从性图表 - 近30天依从率: 87%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二行 -->
+            <div class="content-row">
+                <div class="analysis-card">
+                    <h3><i class="fas fa-heartbeat"></i> 症状改善趋势</h3>
+                    <div class="chart-placeholder">
+                        PHQ-9评分变化图表 - 初始: 18分, 当前: 11分
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3><i class="fas fa-calendar"></i> 近期预约</h3>
+                    <div class="chart-placeholder">
+                        下次复诊: 2024年6月15日 10:30 AM<br>
+                        医生: 李医生
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3><i class="fas fa-bell"></i> 用药提醒</h3>
+                    <div class="chart-placeholder">
+                        今日剩余: 舍曲林(晚上8点)<br>
+                        已完成: 2/3次
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行动按钮 -->
+            <div class="action-buttons">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-download"></i> 导出记录
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-robot"></i> 发送至AI分析
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 这里可以添加页面交互逻辑
+        document.addEventListener('DOMContentLoaded', function () {
+            // 示例：添加新的用药记录
+            const addButtons = document.querySelectorAll('.add-btn');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    alert('打开添加新记录的表单');
+                    // 实际应用中这里会打开一个表单模态框
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

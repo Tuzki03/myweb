@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cLab</title>
+    <link rel="stylesheet" href="style/clabbody.css">
+    <script src="js/labbody.js"></script>
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="community.html">设备链接检测</a></li>
+                <li><a href="clab.html">实时监测</a></li>
+                <li><a href="comreport.html">报告</a></li>
+                <li><a href="personal.html">个性化调控</a></li>
+                <li><a href="follow.html">用药记录跟踪</a></li>
+                <li><a href="science.html">科普说明</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="lab-box">
+            <div class="lab-title">静息态睁眼</div>
+            <div class="lab-image">
+                <img src="images/eyesopen.jpg" alt="eyesopenimg">
+            </div>
+            <div class="labbutton"><a href="#eyesopenlab">开始实验</a></div>
+        </div>
+
+        <div class="lab-box">
+            <div class="lab-title">静息态闭眼</div>
+            <div class="lab-image">
+                <img src="images/eyesclose.jpg" alt="eyescloseimg">
+            </div>
+            <div class="labbutton"><a href="#eyescloselab">开始实验</a></div>
+        </div>
+
+        <div class="lab-box">
+            <div class="lab-title">注意态</div>
+            <div class="lab-image">
+                <img src="images/attention.jpg" alt="attentionimg">
+            </div>
+            <div class="labbutton"><a href="#attentionlab">开始实验</a></div>
+        </div>
+
+        <div class="lab-box">
+            <div class="lab-title">情绪视频</div>
+            <div class="lab-image">
+                <img src="images/emotionone.jpg" alt="emotiononeimg">
+            </div>
+            <div class="labbutton"><a href="#emotiononelab">开始实验</a></div>
+        </div>
+
+        <div class="lab-box">
+            <div class="lab-title">情绪想象</div>
+            <div class="lab-image">
+                <img src="images/emotiontwo.jpg" alt="emotiontwoimg">
+            </div>
+            <div class="labbutton"><a href="#emotiontwolab">开始实验</a></div>
+        </div>
+    </div>
+    <div id="eyesopenlab" style="padding-top: 50px;">
+        <div class="phase-indicator">
+            <i class="fas fa-info-circle"></i> 当前状态: <span id="current-phase-eyesopen">准备就绪</span>
+        </div>
+
+        <div class="status-container">
+            <div class="status-box">
+                <div class="status-title"><i class="far fa-clock"></i> 实验时间</div>
+                <div class="timer" id="main-timer-eyesopen">02:00</div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title"><i class="fas fa-hourglass-start"></i> 已进行</div>
+                <div class="timer" id="elapsed-timer-eyesopen">00:00</div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title"><i class="fas fa-hourglass-end"></i> 剩余时间</div>
+                <div class="timer" id="remaining-timer-eyesopen">02:00</div>
+            </div>
+        </div>
+
+        <div class="plus-point">
+            <img src="images/plus.jpg" alt="加号图像">
+        </div>
+
+        <div class="controls">
+            <button class="btn-start" id="btn-start-eyesopen">
+                <i class="fas fa-play"></i> 开始实验
+            </button>
+            <button class="btn-pause" id="btn-pause-eyesopen">
+                <i class="fas fa-pause"></i> 暂停
+            </button>
+            <button class="btn-reset" id="btn-reset-eyesopen">
+                <i class="fas fa-redo"></i> 重置
+            </button>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar-eyesopen"></div>
+        </div>
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> 实验指导</h3>
+            <p>请睁开眼睛并保持静止，让视线停留在屏幕中央的加号。</p>
+            <p>整个实验将持续 <strong>2分钟</strong>，请保持放松但清醒的状态。</p>
+            <p>尽量减少眨眼和身体移动，以获得高质量的脑电数据。</p>
+
+            <h3><i class="fas fa-list-ol"></i> 实验流程</h3>
+            <ul>
+                <li><strong>0-5秒</strong>: 准备阶段</li>
+                <li><strong>5-125秒</strong>: 静息态睁眼数据采集</li>
+                <li><strong>125-130秒</strong>: 休息环节</li>
+                <li><strong>结束</strong>：下滑继续</li>
+            </ul>
+        </div>
+        <div class="experiment-footer">
+            <p>静息态睁眼实验</p>
+        </div>
+    </div>
+    <div id="eyescloselab" style="padding-top: 50px;">
+        <div class="phase-indicator">
+            <i class="fas fa-info-circle"></i> 当前状态: <span id="current-phase-eyesclose">准备就绪</span>
+        </div>
+
+        <div class="status-container">
+            <div class="status-box">
+                <div class="status-title"><i class="far fa-clock"></i> 实验时间</div>
+                <div class="timer" id="main-timer-eyesclose">02:00</div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title"><i class="fas fa-hourglass-start"></i> 已进行</div>
+                <div class="timer" id="elapsed-timer-eyesclose">00:00</div>
+            </div>
+
+            <div class="status-box">
+                <div class="status-title"><i class="fas fa-hourglass-end"></i> 剩余时间</div>
+                <div class="timer" id="remaining-timer-eyesclose">02:00</div>
+            </div>
+        </div>
+
+        <!-- 声音提示控制 -->
+        <div class="sound-controls">
+            <button class="sound-btn" id="btn-start-beep-eyesclose">
+                <i class="fas fa-play-circle"></i> 播放开始提示音
+            </button>
+            <button class="sound-btn" id="btn-end-beep-eyesclose">
+                <i class="fas fa-stop-circle"></i> 播放结束提示音
+            </button>
+
+        </div>
+        <div class="controls">
+            <button class="btn-start" id="btn-start-eyesclose">
+                <i class="fas fa-play"></i> 开始实验
+            </button>
+            <button class="btn-pause" id="btn-pause-eyesclose">
+                <i class="fas fa-pause"></i> 暂停
+            </button>
+            <button class="btn-reset" id="btn-reset-eyesclose">
+                <i class="fas fa-redo"></i> 重置
+            </button>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar-eyesclose"></div>
+        </div>
+
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> 实验指导</h3>
+            <p>请轻轻闭上眼睛，保持身体静止，让思维自然地流动。</p>
+            <p>整个实验将持续 <strong>2分钟</strong>，请保持放松但清醒的状态。</p>
+            <p>实验开始和结束时会有声音提示，请注意聆听。</p>
+            <p>尽量减少身体移动，以获得高质量的脑电数据。</p>
+
+            <h3><i class="fas fa-list-ol"></i> 实验流程</h3>
+            <ul>
+                <li><strong>0-5秒</strong>: 准备阶段 (声音提示)</li>
+                <li><strong>5-125秒</strong>: 静息态闭眼数据采集</li>
+                <li><strong>125-130秒</strong>: 休息环节 (声音提示)</li>
+                <li><strong>结束</strong>:下滑继续</li>
+            </ul>
+
+            <h3><i class="fas fa-volume-up"></i> 声音提示说明</h3>
+            <p>实验开始时会播放一声高音提示，结束时播放一声低音提示。</p>
+            <p>您可以在实验开始前测试提示音效果。</p>
+        </div>
+
+        <div class="experiment-footer">
+            <p>静息态闭眼实验</p>
+        </div>
+    </div>
+    <div id="attentionlab" style="padding-top: 50px;">
+        <div class="attention-header">
+            <h2><i class="fas fa-brain"></i> 注意态实验</h2>
+            <div class="attention-subtitle">连续减法任务</div>
+        </div>
+
+        <div class="attention-phase">
+            <i class="fas fa-info-circle"></i> 当前状态: <span id="attention-current-phase">准备就绪</span>
+        </div>
+
+        <div class="attention-status-container">
+            <div class="attention-status-box">
+                <div class="attention-status-title"><i class="far fa-clock"></i> 实验时间</div>
+                <div class="attention-timer" id="attention-main-timer">01:00</div>
+            </div>
+
+            <div class="attention-status-box">
+                <div class="attention-status-title"><i class="fas fa-hourglass-start"></i> 已进行</div>
+                <div class="attention-timer" id="attention-elapsed-timer">00:00</div>
+            </div>
+
+            <div class="attention-status-box">
+                <div class="attention-status-title"><i class="fas fa-hourglass-end"></i> 剩余时间</div>
+                <div class="attention-timer" id="attention-remaining-timer">01:00</div>
+            </div>
+        </div>
+
+        <div class="attention-number-display">
+            <div class="attention-number" id="attention-current-number">0</div>
+        </div>
+
+        <div class="attention-controls">
+            <button class="attention-btn attention-btn-start" id="attention-btn-start">
+                <i class="fas fa-play"></i> 开始实验
+            </button>
+            <button class="attention-btn attention-btn-pause" id="attention-btn-pause">
+                <i class="fas fa-pause"></i> 暂停
+            </button>
+            <button class="attention-btn attention-btn-reset" id="attention-btn-reset">
+                <i class="fas fa-redo"></i> 重置
+            </button>
+        </div>
+
+        <div class="attention-progress-container">
+            <div class="attention-progress-bar" id="attention-progress-bar"></div>
+        </div>
+
+        <div class="attention-instructions">
+            <h3><i class="fas fa-info-circle"></i> 实验指导</h3>
+            <p>请集中注意力，完成连续减法任务。</p>
+            <p>屏幕上将显示一个初始数字，您需要连续减去3，并将结果默算出来。</p>
+            <p>整个实验将持续 <strong>1分钟</strong>，请保持专注。</p>
+
+            <h3><i class="fas fa-list-ol"></i> 实验流程</h3>
+            <ul>
+                <li><strong>0-3秒</strong>: 准备阶段</li>
+                <li><strong>3-60秒</strong>: 连续减法任务</li>
+                <li><strong>重复3次</strong>: 完成3个trial</li>
+                <li><strong>结束</strong>: 下滑继续</li>
+            </ul>
+            <h3><i class="fas fa-calculator"></i> 任务说明</h3>
+            <p>屏幕上将显示一个随机初始数字（100-200之间）。</p>
+            <p>您需要心算"当前数字 - 3"的结果。</p>
+            <p>屏幕上的数字会每隔2秒自动更新为减去3后的结果。</p>
+            <p>请持续进行这个心算过程，直到实验结束。</p>
+        </div>
+
+        <div class="attention-footer">
+            <p>注意态实验</p>
+        </div>
+    </div>
+    <div id="emotiononelab" style="padding-top: 50px;">
+        <div class="emotion-header">
+            <h2><i class="fas fa-smile"></i> 情绪视频实验</h2>
+            <div class="emotion-subtitle">情绪调节与神经反馈</div>
+        </div>
+
+        <div class="emotion-phase">
+            当前状态: <span id="emotion-current-phase">准备就绪</span>
+        </div>
+
+
+        <div class="emotion-status-container">
+            <div class="emotion-status-box">
+                <div class="emotion-status-title"><i class="far fa-clock"></i> 实验时间</div>
+                <div class="emotion-timer" id="emotion-main-timer">01:10</div>
+            </div>
+
+            <div class="emotion-status-box">
+                <div class="emotion-status-title"><i class="fas fa-hourglass-start"></i> 已进行</div>
+                <div class="emotion-timer" id="emotion-elapsed-timer">00:00</div>
+            </div>
+
+            <div class="emotion-status-box">
+                <div class="emotion-status-title"><i class="fas fa-hourglass-end"></i> 剩余时间</div>
+                <div class="emotion-timer" id="emotion-remaining-timer">01:10</div>
+            </div>
+        </div>
+
+        <div class="emotion-video-container">
+            <div class="emotion-video-placeholder">
+                情绪视频将在此处播放
+            </div>
+        </div>
+
+        <div class="emotion-feedback-container">
+            <div class="emotion-feedback-title">
+                情绪神经反馈
+            </div>
+            <div class="emotion-feedback-bar">
+                <div class="emotion-feedback-progress" id="emotion-feedback-progress"></div>
+            </div>
+            <div class="emotion-feedback-labels">
+                <span>平静</span>
+                <span>高兴</span>
+            </div>
+        </div>
+
+        <div class="emotion-controls">
+            <button class="emotion-btn emotion-btn-start" id="emotion-btn-start">
+                <i class="fas fa-play"></i> 开始实验
+            </button>
+            <button class="emotion-btn emotion-btn-pause" id="emotion-btn-pause">
+                <i class="fas fa-pause"></i> 暂停
+            </button>
+            <button class="emotion-btn emotion-btn-reset" id="emotion-btn-reset">
+                <i class="fas fa-redo"></i> 重置
+            </button>
+        </div>
+
+        <div class="emotion-progress-container">
+            <div class="emotion-progress-bar" id="emotion-progress-bar"></div>
+        </div>
+
+        <div class="emotion-instructions">
+            <h3><i class="fas fa-info-circle"></i> 实验指导</h3>
+            <p>请观看视频片段，并运用情绪调节方法，保持对应的情绪状态。</p>
+            <p>整个实验将持续 <strong>70秒</strong>，包含4个trial。</p>
+            <p>请根据神经反馈进度条调节您的情绪状态。</p>
+
+            <h3><i class="fas fa-list-ol"></i> 实验流程</h3>
+            <ul>
+                <li><strong>0-5秒</strong>: 准备阶段</li>
+                <li><strong>5-65秒</strong>: 观看情绪视频并调节情绪</li>
+                <li><strong>65-70秒</strong>: 休息阶段</li>
+                <li><strong>重复4次</strong>: 完成4个trial</li>
+                <li><strong>结束</strong>: 下滑继续</li>
+            </ul>
+
+            <h3><i class="fas fa-balance-scale"></i> 情绪调节说明</h3>
+            <p>即将播放高兴/平静情绪片段，请感受并保持高兴/平静情绪。</p>
+            <p>通过神经反馈进度条，您可以实时了解自己的情绪状态。</p>
+            <p>进度条偏向左侧表示平静，偏向右侧表示高兴。</p>
+            <p>请尝试通过情绪调节方法，使进度条保持在目标区域。</p>
+        </div>
+
+        <div class="emotion-footer">
+            <p>情绪视频实验</p>
+        </div>
+    </div>
+    <div id="emotiontwolab" style="padding-top: 50px;">
+        <div class="imagination-header">
+            <h2><i class="fas fa-cloud"></i> 情绪想象实验</h2>
+            <div class="imagination-subtitle">情绪调节与想象训练</div>
+        </div>
+
+        <div class="imagination-phase">
+            <i class="fas fa-info-circle"></i> 当前状态: <span id="imagination-current-phase">准备就绪</span>
+        </div>
+
+        <div class="imagination-status-container">
+            <div class="imagination-status-box">
+                <div class="imagination-status-title"><i class="far fa-clock"></i> 实验时间</div>
+                <div class="imagination-timer" id="imagination-main-timer">01:00</div>
+            </div>
+
+            <div class="imagination-status-box">
+                <div class="imagination-status-title"><i class="fas fa-hourglass-start"></i> 已进行</div>
+                <div class="imagination-timer" id="imagination-elapsed-timer">00:00</div>
+            </div>
+
+            <div class="imagination-status-box">
+                <div class="imagination-status-title"><i class="fas fa-hourglass-end"></i> 剩余时间</div>
+                <div class="imagination-timer" id="imagination-remaining-timer">01:00</div>
+            </div>
+        </div>
+
+        <div class="imagination-scene">
+            <div id="imagination-scene-text">
+                请闭上眼睛,<br>想象让您感到高兴或平静的场景
+            </div>
+        </div>
+
+        <div class="imagination-mode-buttons">
+            <button class="imagination-mode-btn">
+                <i class="fas fa-brain"></i> 有反馈模式
+            </button>
+            <button class="imagination-mode-btn">
+                <i class="fas fa-ban"></i> 无反馈模式
+            </button>
+        </div>
+
+        <div class="imagination-feedback-container">
+            <div class="imagination-feedback-title">
+                <i class="fas fa-wave-square"></i> 情绪神经反馈
+            </div>
+            <div class="imagination-feedback-bar">
+                <div class="imagination-feedback-progress" id="imagination-feedback-progress"></div>
+            </div>
+            <div class="imagination-feedback-labels">
+                <span>平静</span>
+                <span>高兴</span>
+            </div>
+        </div>
+
+        <div class="imagination-controls">
+            <button class="imagination-btn imagination-btn-start" id="imagination-btn-start">
+                <i class="fas fa-play"></i> 开始实验
+            </button>
+            <button class="imagination-btn imagination-btn-pause" id="imagination-btn-pause">
+                <i class="fas fa-pause"></i> 暂停
+            </button>
+            <button class="imagination-btn imagination-btn-reset" id="imagination-btn-reset">
+                <i class="fas fa-redo"></i> 重置
+            </button>
+        </div>
+
+        <div class="imagination-progress-container">
+            <div class="imagination-progress-bar" id="imagination-progress-bar"></div>
+        </div>
+
+        <div class="imagination-instructions">
+            <h3><i class="fas fa-info-circle"></i> 实验指导</h3>
+            <p>请运用情绪调节方法，想象情景，保持高兴或平静的情绪。</p>
+            <p>整个实验将持续 <strong>1分钟</strong>。</p>
+            <p>您可以选择有反馈或无反馈两种模式。</p>
+
+            <h3><i class="fas fa-list-ol"></i> 实验流程</h3>
+            <ul>
+                <li><strong>0-5秒</strong>: 准备阶段</li>
+                <li><strong>5-60秒</strong>: 情绪想象与调节</li>
+            </ul>
+
+            <h3> 模式说明</h3>
+            <p><strong>有反馈模式</strong>: 显示情绪神经反馈进度条，帮助您了解当前情绪状态。</p>
+            <p><strong>无反馈模式</strong>: 不显示反馈信息，仅依靠自我感知调节情绪。</p>
+
+            <h3> 想象指导</h3>
+            <p>请在接下来的一分钟，感受并保持高兴/平静情绪。</p>
+            <p>想象让您感到愉悦或平静的场景，如美丽的海滩、宁静的森林或快乐的回忆。</p>
+        </div>
+
+        <div class="imagination-footer">
+            <p>情绪想象实验</p>
+        </div>
+    </div>
+    <div class="gotoreport"><a href="comreport.html">查看报告</a></div>
+    <script src="js/labbody.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh - CN">
+
+<head>
+    <meta charset="UTF - 8">
+    <meta name="viewport" content="width=device-width, initial - scale=1.0">
+    <link rel="stylesheet" href="style/machine.css">
+    <link rel="stylesheet" href="style/cnav.css">
+    <title>Community</title>
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="community.html">设备链接检测</a></li>
+                <li><a href="clab.html">实时监测</a></li>
+                <li><a href="comreport.html">报告</a></li>
+                <li><a href="personal.html">个性化调控</a></li>
+                <li><a href="follow.html">用药记录跟踪</a></li>
+                <li><a href="science.html">科普说明</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="bigbox">
+        <div class="left-panel">
+            <div class="button-group">
+                <button id="stopTest">停止阻抗测试</button>
+                <button id="startRetest">开始测试</button>
+                <button id="testImpedance">阻抗测试</button>
+                <button id="selectBadLead">坏导选择</button>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="container">
+                <div class="ip-display">192.168.31.40</div>
+                <canvas id="impedanceCanvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="tiaozhuan">设备链接完成 . . . .</div>
+    <div class="gotolab"><a href="clab.html">进入实时监测</a></div>
+    <script src="js/machine.js"></script>
+</body>
+
+</html>

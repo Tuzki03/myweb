@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comreport</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="style/cnav.css">
+    <link rel="stylesheet" href="style/comreport.css">
+    <script src="js/comreport.js"></script>
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="community.html">设备链接检测</a></li>
+                <li><a href="clab.html">实时监测</a></li>
+                <li><a href="comreport.html">报告</a></li>
+                <li><a href="personal.html">个性化调控</a></li>
+                <li><a href="follow.html">用药记录跟踪</a></li>
+                <li><a href="science.html">科普说明</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="summary">
+        <h2>心理健康综合评估</h2>
+        <p>姓名：张某某 | 年龄：28 | 测试日期：2025年8月25日</p>
+        <p>综合心理健康指数：<span class="risk-low">72/100 - 良好</span></p>
+        <p>主要优势：情绪稳定性良好，睡眠质量正常</p>
+        <p>关注领域：注意力集中度有待提升</p>
+    </div>
+    <div id="community" class="tab-content active">
+
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">睡眠质量评估</div>
+                <div id="sleepChart" class="chart-container"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">注意力水平分析</div>
+                <div id="attentionChart" class="chart-container"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">情绪状态分布</div>
+                <div id="emotionChart" class="chart-container"></div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">心理健康维度分析</div>
+                <div id="dimensionChart" class="chart-container"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="sumadvice">
+        <h2>实验报告</h2>
+        <p>过去30天，您的心理健康状况整体平稳，平均得分72。脑电监测数据显示，情绪状态中"平静"占比最高（40.2%），积极情绪（高兴+平静）总占比达75.3%，情绪调节能力良好。注意力集中度评分为65分，较上月提升10.2%，前额叶β波活动趋于稳定，α波同步性增强，表明认知控制功能有所改善。
+
+        <p>睡眠监测数据显示，NREM
+            III期（深度睡眠）占比18.5%，REM睡眠占比24.8%，睡眠结构基本完整。然而，睡眠纺锤波密度（12.5次/分钟）和功率谱密度（δ波：35.2μV²，θ波：28.7μV²）较健康参考值略有下降，可能影响记忆巩固效率。睡眠质量指数（PSQI）为5.2，处于正常范围，但睡眠潜伏期（平均28分钟）偏长，睡眠效率84.7%略低于理想水平（>85%）。
+        </p>
+        <p>基于多模态数据分析，建议：（1）继续坚持每日15分钟的正念呼吸训练，增强前额叶-边缘系统功能连接；（2）晚间增加δ波诱导音乐干预，促进深度睡眠占比提升；（3）每周进行3次注意力强化训练，目标将持续专注时间从45秒提升至60秒以上。建议下月复查24小时动态脑电监测，评估睡眠结构优化效果。
+        </p>
+        </p>
+    </div>
+    <script src="js/comreport.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="style/data.css">
+
+</head>
+
+<body>
+    <div class="Container1">
+        <nav>
+            <ul>
+                <li><a href="professional.html">数据采集</a></li>
+                <li><a href="lab.html">实时监测</a></li>
+                <li><a href="#">数据库</a></li>
+                <li><a href="proreport.html">专业分析报告</a></li>
+                <li><a href="table.html">自评量表</a></li>
+                <li><a href="explain.html">说明</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <h3><i class="fas fa-users"></i> 测试者统计</h3>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">总测试者</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">本周新增</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">35%</div>
+                    <div class="stat-label">女性比例</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-brain"></i> 脑电数据</h3>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">256</div>
+                    <div class="stat-label">EEG记录</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">98.3%</div>
+                    <div class="stat-label">数据质量</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">任务类型</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-chart-pie"></i> 风险分布</h3>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value risk-low">62%</div>
+                    <div class="stat-label">低风险</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value risk-medium">24%</div>
+                    <div class="stat-label">中风险</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value risk-high">14%</div>
+                    <div class="stat-label">高风险</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-container">
+        <h2><i class="fas fa-table"></i> 测试者数据</h2>
+
+        <div class="search-bar">
+            <input type="text" id="patientNameSearch" placeholder="输入患者姓名搜索">
+            <button id="searchButton"><i class="fas fa-search"></i> 搜索</button>
+            <button id="resetButton"><i class="fas fa-redo"></i> 重置</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>α波功率</th>
+                    <th>β波功率</th>
+                    <th>θ波功率</th>
+                    <th>注意力得分</th>
+                    <th>情绪稳定性</th>
+                    <th>抑郁风险</th>
+                    <th>最后测试</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="dataTableBody">
+                <tr>
+                    <td>1001</td>
+                    <td><a href="#">张明</a></td>
+                    <td>32</td>
+                    <td>男</td>
+                    <td>12.5</td>
+                    <td>8.3</td>
+                    <td>6.2</td>
+                    <td>78</td>
+                    <td>0.62</td>
+                    <td class="risk-low">低风险 (24)</td>
+                    <td>2023-10-15</td>
+                    <td><button class="btn-modify">查看</button></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td><a href="#">李小红</a></td>
+                    <td>28</td>
+                    <td>女</td>
+                    <td>10.2</td>
+                    <td>9.1</td>
+                    <td>7.8</td>
+                    <td>65</td>
+                    <td>0.45</td>
+                    <td class="risk-medium">中风险 (52)</td>
+                    <td>2023-10-16</td>
+                    <td><button class="btn-modify">查看</button></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td><a href="#">王建国</a></td>
+                    <td>45</td>
+                    <td>男</td>
+                    <td>8.7</td>
+                    <td>7.5</td>
+                    <td>9.3</td>
+                    <td>58</td>
+                    <td>0.32</td>
+                    <td class="risk-high">高风险 (76)</td>
+                    <td>2023-10-14</td>
+                    <td><button class="btn-modify">查看</button></td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td><a href="#">赵丽</a></td>
+                    <td>36</td>
+                    <td>女</td>
+                    <td>13.2</td>
+                    <td>8.9</td>
+                    <td>5.4</td>
+                    <td>82</td>
+                    <td>0.71</td>
+                    <td class="risk-low">低风险 (18)</td>
+                    <td>2023-10-17</td>
+                    <td><button class="btn-modify">查看</button></td>
+                </tr>
+                <tr>
+                    <td>1005</td>
+                    <td><a href="#">刘伟</a></td>
+                    <td>29</td>
+                    <td>男</td>
+                    <td>11.8</td>
+                    <td>8.4</td>
+                    <td>6.9</td>
+                    <td>71</td>
+                    <td>0.53</td>
+                    <td class="risk-medium">中风险 (47)</td>
+                    <td>2023-10-16</td>
+                    <td><button class="btn-modify">查看</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="operation-buttons">
+            <button class="btn-add"><i class="fas fa-plus"></i> 添加测试者</button>
+            <button class="btn-modify"><i class="fas fa-edit"></i> 修改数据</button>
+            <button class="btn-delete"><i class="fas fa-trash"></i> 删除选中</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchButton = document.getElementById('searchButton');
+            const resetButton = document.getElementById('resetButton');
+            const searchInput = document.getElementById('patientNameSearch');
+
+            searchButton.addEventListener('click', function () {
+                const searchValue = searchInput.value.toLowerCase();
+                const rows = document.querySelectorAll('#dataTableBody tr');
+
+                rows.forEach(row => {
+                    const name = row.cells[1].textContent.toLowerCase();
+                    if (name.includes(searchValue)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            resetButton.addEventListener('click', function () {
+                searchInput.value = '';
+                const rows = document.querySelectorAll('#dataTableBody tr');
+                rows.forEach(row => {
+                    row.style.display = '';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
